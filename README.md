@@ -8,6 +8,7 @@ A production-ready, scalable API testing framework built with Python, Pytest, an
 * **Service Object Model (SOM):** Decouples API logic from test scripts for high maintainability.
 * **CI/CD Ready:** Integrated with GitHub Actions for automated testing on every push.
 
+
 ## Prerequisites
 * Python 3.9+
 * pip
@@ -53,7 +54,7 @@ api_test_framework/
 │   └── schemas/            # JSON Schema definitions
 └── tests/
     └── test_bookings.py    # Test cases
-
+```
 
 ## Directory Structure
 - `src/`: Core service objects.
@@ -89,3 +90,7 @@ Our framework utilizes a multi-layered validation approach to ensure high reliab
 Here is the local execution of the test suite :
 
 ![Test Execution](docs/api_test_execution.png)
+
+
+
+
