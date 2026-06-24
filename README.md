@@ -39,8 +39,10 @@ Execute the suite and generate the HTML report:
 
 pytest --html=report.html --self-contained-html
 
-## Project Structure
-api_test_framework
+## 📂 Project Structure
+
+```text
+api_test_framework/
 ├── .github/workflows/      # CI/CD Pipeline
 ├── .env                    # Credentials & Configuration
 ├── conftest.py             # Fixtures & Pytest hooks
