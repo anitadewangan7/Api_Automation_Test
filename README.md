@@ -69,3 +69,13 @@ restful_booker_framework/
 3. **Authentication:** The `BookerClient` manages token lifecycle via cookies, ensuring secure access to CRUD operations.
 4. **Architectural Why:** The Service Object Model isolates API URL/Auth logic, allowing tests to remain purely descriptive of business requirements.
 
+## 🛡 Validation Strategy: What & Why
+
+Our framework utilizes a multi-layered validation approach to ensure high reliability and data integrity.
+
+| Validation Type | Implementation | Why it is critical |
+| :--- | :--- | :--- |
+| **Status Code** | `assert response.status_code == 200` | Confirms the endpoint is reachable, business logic passed, and authentication was successful. |
+| **Contract (Schema)** | `jsonschema.validate(...)` | Enforces that the JSON structure (types, required fields) never changes, catching "breaking changes" instantly. |
+| **Performance** | `response.elapsed.total_seconds() < 2.0` | Ensures the API meets SLA latency requirements and alerts us if the service becomes sluggish. |
+| **State Consistency** | `yield` fixture cleanup | Ensures test idempotency; prevents "data pollution" by removing test resources after completion. |
