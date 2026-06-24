@@ -40,15 +40,18 @@ Execute the suite and generate the HTML report:
 pytest --html=report.html --self-contained-html
 
 ## Project Structure
-restful_booker_framework/
+api_test_framework
+├── .github/workflows/      # CI/CD Pipeline
 ├── .env                    # Credentials & Configuration
 ├── conftest.py             # Fixtures & Pytest hooks
+├── pytest.ini              # Pytest configuration
 ├── requirements.txt        # Dependencies
 ├── src/
 │   ├── api_client.py       # Service Object Model
 │   └── schemas/            # JSON Schema definitions
 └── tests/
     └── test_bookings.py    # Test cases
+
 
 ## Directory Structure
 - `src/`: Core service objects.
@@ -79,3 +82,8 @@ Our framework utilizes a multi-layered validation approach to ensure high reliab
 | **Contract (Schema)** | `jsonschema.validate(...)` | Enforces that the JSON structure (types, required fields) never changes, catching "breaking changes" instantly. |
 | **Performance** | `response.elapsed.total_seconds() < 2.0` | Ensures the API meets SLA latency requirements and alerts us if the service becomes sluggish. |
 | **State Consistency** | `yield` fixture cleanup | Ensures test idempotency; prevents "data pollution" by removing test resources after completion. |
+
+## Test Execution 
+Here is the local execution of the test suite :
+
+![Test Execution](docs/api_test_execution.png)
