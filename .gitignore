@@ -1,0 +1,46 @@
+# ==========================================
+# Environments & System Files
+# ==========================================
+# Local virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# IDE & Text Editors
+# ==========================================
+# VS Code specific files and workspaces
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+
+# ==========================================
+# Python & Pytest Cache / Output
+# ==========================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest runtime cache
+.pytest_cache/
+
+# Test coverage & reports (if you add html reporting later)
+.coverage
+htmlcov/
+*.log
+report.html
+
+# ==========================================
+# Secrets and Credentials
+# ==========================================
+# Local environment variables containing sensitive keys
+.env

@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "firstname": {"type": "string"},
+    "lastname": {"type": "string"},
+    "totalprice": {"type": "integer"},
+    "depositpaid": {"type": "boolean"}
+  },
+  "required": ["firstname", "lastname", "totalprice", "depositpaid"]
+}
